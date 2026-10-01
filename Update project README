@@ -138,6 +138,12 @@ The secure communication framework uses Alice and Bob gateways to protect MAVLin
 
 ![Secure QKD and AES MAVLink Communication](Figure_5_6_QKD_AES_Secure_MAVLink_Communication.png.png)
 
+### Unsecured MAVLink Traffic — Wireshark Analysis
+
+Wireshark was used to capture and analyse MAVLink/UDP traffic in the unsecured baseline configuration.
+
+![Unsecured MAVLink Traffic](Figure_5_2_Wireshark_Unsecured_MAVLink_Traffic.png.png)
+
 ## Experimental Results
 
 The experiments demonstrated:
