@@ -104,6 +104,32 @@ Each packet-load configuration was tested over 1,000 iterations to analyse the r
 | `secure_mitm_attack.py` | MITM experiment against protected traffic |
 | `replay_attack.py` | Controlled Replay attack experiment |
 
+## Experimental Evidence
+
+### Secure QKD + AES-256-GCM MAVLink Communication
+The Alice and Bob gateways protect MAVLink traffic using AES-256-GCM authentication and sequence-number validation.
+
+![Secure MAVLink Communication](Figure_5_6_QKD_AES_Secure_MAVLink_Communication.png.png)
+
+### Unsecured MAVLink Traffic
+Wireshark capture of MAVLink/UDP traffic in the unsecured baseline configuration.
+
+![Unsecured MAVLink Wireshark Traffic](Figure_5_2_Wireshark_Unsecured_MAVLink_Traffic.png.png)
+
+### MITM Attack — Unsecured Communication
+The experimental MITM proxy intercepts and modifies MAVLink traffic in the unsecured configuration.
+
+![Unsecured MITM Attack](Figure_5_3_MITM_Attack_On_Unsecured_MAVLink.png.png)
+
+### Replay Attack — Unsecured Communication
+Previously captured MAVLink traffic is retransmitted during the controlled Replay attack experiment.
+
+![Unsecured Replay Attack](Figure_5_4_Replay_Attack_On_Unsecured_MAVLink.png.png)
+
+### MITM Attack — Secured Communication
+Modification of AES-GCM-protected ciphertext results in authentication failure, allowing tampered packets to be rejected.
+
+![MITM Attack Blocked](Figure_5_7_MITM_Attack_Blocked_By_QKD_AES.png.png)
 ## Experimental Results
 
 The experiments demonstrated:
