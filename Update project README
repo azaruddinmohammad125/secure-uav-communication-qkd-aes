@@ -130,6 +130,14 @@ Previously captured MAVLink traffic is retransmitted during the controlled Repla
 Modification of AES-GCM-protected ciphertext results in authentication failure, allowing tampered packets to be rejected.
 
 ![MITM Attack Blocked](Figure_5_7_MITM_Attack_Blocked_By_QKD_AES.png.png)
+## Experimental Evidence
+
+### Secure QKD + AES-256-GCM MAVLink Communication
+
+The secure communication framework uses Alice and Bob gateways to protect MAVLink traffic using AES-256-GCM authenticated encryption and sequence-number validation.
+
+![Secure QKD and AES MAVLink Communication](Figure_5_6_QKD_AES_Secure_MAVLink_Communication.png.png)
+
 ## Experimental Results
 
 The experiments demonstrated:
